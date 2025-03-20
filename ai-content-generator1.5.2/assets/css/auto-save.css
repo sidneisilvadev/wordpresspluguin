@@ -1,0 +1,45 @@
+/* Estilos para a barra de status do auto-save */
+.mce-autosave-status {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+    margin-top: -1px;
+}
+
+.mce-autosave-status .status-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mce-autosave-status .error {
+    color: #dc3545;
+}
+
+.autosave-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.autosave-toggle input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Animação de salvamento */
+@keyframes saving {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.mce-autosave-status.saving .status-text {
+    animation: saving 1s infinite;
+} 

@@ -1,0 +1,46 @@
+/* Estilos para o contador de estatísticas */
+.mce-stats-container {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+.mce-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mce-stat-item .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: #82878c;
+}
+
+.mce-stat-item span {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Responsividade */
+@media screen and (max-width: 782px) {
+    .mce-stats-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .mce-stat-item {
+        width: 100%;
+    }
+} 

@@ -1,0 +1,248 @@
+.aicg-ai-modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.aicg-ai-modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.aicg-ai-close {
+    color: #666;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    margin: -15px -15px 0 0;
+}
+
+.aicg-ai-close:hover,
+.aicg-ai-close:focus {
+    color: #000;
+}
+
+.aicg-ai-modal h2 {
+    margin: 0 0 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    color: #1d2327;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.aicg-ai-field {
+    margin-bottom: 20px;
+}
+
+.aicg-ai-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1d2327;
+    font-size: 13px;
+}
+
+.aicg-ai-field select,
+.aicg-ai-field input[type="text"],
+.aicg-ai-field input[type="number"],
+.aicg-ai-field textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.aicg-ai-field select {
+    height: 36px;
+    padding-right: 30px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23757575" viewBox="0 0 16 16"><path d="M8 10l4-4H4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.aicg-ai-field select:hover {
+    border-color: #999;
+}
+
+.aicg-ai-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.aicg-ai-field-inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.aicg-ai-field-inline label {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+    min-width: 120px;
+}
+
+.aicg-ai-field-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.aicg-ai-field-group input[type="number"] {
+    width: 120px;
+    text-align: center;
+}
+
+.aicg-ai-separator {
+    color: #666;
+    font-weight: normal;
+}
+
+.aicg-ai-actions {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.aicg-ai-loading {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+}
+
+.aicg-ai-loading .spinner {
+    float: none;
+    margin: 0 10px 0 0;
+    visibility: visible;
+}
+
+.aicg-ai-preview {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.aicg-ai-preview h3 {
+    margin: 0 0 15px;
+    color: #1d2327;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.aicg-ai-preview-content {
+    padding: 20px;
+    background-color: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.aicg-ai-preview-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Provider-specific styling */
+#aicg-ai-provider {
+    background-color: #f8f9fa;
+    border-color: #2271b1;
+}
+
+#aicg-ai-provider option {
+    padding: 8px 12px;
+}
+
+/* AI Button Styling */
+#aicg-ai-button {
+    position: relative;
+    padding: 4px 12px 4px 30px !important;
+    margin-left: 5px;
+    background: #2271b1;
+    color: #fff;
+    border-color: #2271b1;
+}
+
+#aicg-ai-button:hover {
+    background: #135e96;
+    border-color: #135e96;
+}
+
+#aicg-ai-button .dashicons {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Checkbox styling */
+.aicg-ai-field input[type="checkbox"] {
+    margin: 0 8px 0 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    .aicg-ai-modal-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .aicg-ai-field-inline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .aicg-ai-field-inline label {
+        margin-bottom: 8px;
+    }
+
+    .aicg-ai-field-group {
+        width: 100%;
+    }
+
+    .aicg-ai-field-group input[type="number"] {
+        flex: 1;
+    }
+
+    .aicg-ai-actions,
+    .aicg-ai-preview-actions {
+        flex-direction: column;
+    }
+
+    .aicg-ai-actions button,
+    .aicg-ai-preview-actions button {
+        width: 100%;
+    }
+} 
